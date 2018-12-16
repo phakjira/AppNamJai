@@ -20,7 +20,7 @@ public class CreateUser extends AppCompatActivity {
     EditText editTextID;
     Spinner spinnerFaculty;
     Spinner spinnerYear;
-    Spinner spinnerGender;
+    EditText editTextGender;
     EditText editTextNick;
     EditText editTextEmail;
 
@@ -39,14 +39,14 @@ public class CreateUser extends AppCompatActivity {
         editTextID = findViewById(R.id.editTextID);
         spinnerFaculty = findViewById(R.id.spinnerFaculty);
         spinnerYear = findViewById(R.id.spinnerYear);
-        spinnerGender = findViewById(R.id.spinnerGender);
+        editTextGender = findViewById(R.id.editTextGender);
         editTextEmail = findViewById(R.id.editTextemail);
         editTextNick = findViewById(R.id.editTextNick);
         Intent go=getIntent();
         String email=go.getStringExtra("email");
         String gender=go.getStringExtra("gender");
         editTextEmail.setText(email);
-        //spinnerGender.setText("gender");
+        editTextGender.setText(gender);
     }
 
     public void addUser(){
@@ -55,7 +55,7 @@ public class CreateUser extends AppCompatActivity {
         String studentID = editTextID.getText().toString().trim();
         String faculty = spinnerFaculty.getSelectedItem().toString();
         String year = spinnerYear.getSelectedItem().toString();
-        String gender = spinnerGender.getSelectedItem().toString();
+        String gender = editTextGender.getText().toString();
         String nickName = editTextNick.getText().toString();
         String email = editTextEmail.getText().toString();
 
