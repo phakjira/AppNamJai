@@ -19,7 +19,8 @@
         <activity android:name=".Welcome" />
         <activity
             android:name=".Profile"
-            android:label="@string/title_activity_profile"></activity>
+            android:label="@string/title_activity_profile" />
+        <activity android:name=".YourNamJai"></activity>
     </application>
 
 </manifest>
