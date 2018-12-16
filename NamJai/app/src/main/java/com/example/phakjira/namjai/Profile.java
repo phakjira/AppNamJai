@@ -24,7 +24,7 @@ public class Profile extends AppCompatActivity {
                     return true;
                 case R.id.navigation_yournamjai:
                     //TextMessage.setText(R.string.title_dashboard);
-                    Intent in=new Intent(getApplication(),YourNamjai.class);
+                    Intent in=new Intent(getApplication(),YourNamJai.class);
                     startActivity(in);
                     return true;
                 case R.id.navigation_createnamjai:

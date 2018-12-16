@@ -4,6 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".YourNamJai">
+    tools:context=".YourNamJai"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/textViewYouchoose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="27dp"
+        android:text="Namjai that you choose"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNamjaiyouchoose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewChooseyou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginBottom="22dp"
+        android:text="Your namjai is chosen"
+        app:layout_constraintBottom_toTopOf="@+id/editTextYournamjaiischosen"
+        app:layout_constraintStart_toStartOf="@+id/editTextYournamjaiischosen"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNamjaiyouchoose" />
+
+    <EditText
+        android:id="@+id/editTextNamjaiyouchoose"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="54dp"
+        android:background="@color/coralpink"
+        android:ems="10"
+        android:hint="namjaiyouchoose"
+        android:inputType="textMultiLine"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/textViewChooseyou"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewYouchoose" />
+
+    <EditText
+        android:id="@+id/editTextYournamjaiischosen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:layout_marginBottom="83dp"
+        android:background="@color/coralpink"
+        android:ems="10"
+        android:hint="whochooseyournamjai"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewChooseyou" />
 
 </android.support.constraint.ConstraintLayout>
