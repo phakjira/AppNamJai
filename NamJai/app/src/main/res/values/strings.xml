@@ -4,4 +4,26 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="Login">Login</string>
+    <string name="facebook_app_id">1429465697191095</string>
+    <string name="fb_login_protocol_scheme">fb1429465697191095</string>
+    <string name="Profile">Profile</string>
+    <array name="Faculty">
+        <item>            </item>
+        <item>Engineering</item>
+        <item>Art</item>
+        <item>Science</item>
+        <item>Education</item>
+        <item>Political Science</item>
+    </array>
+
+    <array name="year">
+        <item>        </item>
+        <item>First</item>
+        <item>Second</item>
+        <item>Third</item>
+        <item>Fourth</item>
+        <item>Others</item>
+    </array>
+
 </resources>
