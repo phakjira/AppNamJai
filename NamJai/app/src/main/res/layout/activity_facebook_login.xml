@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
         android:background="@color/nudePink"
-        android:onClick="getRequest"
+        android:onClick="onClickedNext"
         android:text="Next"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"

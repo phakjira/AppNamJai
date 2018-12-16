@@ -199,4 +199,12 @@ public class FacebookLogin extends AppCompatActivity {
         startActivity(createUser);
         AccessToken accessToken = AccessToken.getCurrentAccessToken();
     }*/
-    }}
+    }
+
+    public void onClickedNext(View view){
+        Intent createUser = new Intent(this, CreateUser.class);
+        startActivity(createUser);
+        AccessToken accessToken = AccessToken.getCurrentAccessToken();
+    }
+
+}
