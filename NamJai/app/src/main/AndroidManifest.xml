@@ -20,7 +20,9 @@
         <activity
             android:name=".Profile"
             android:label="@string/title_activity_profile" />
-        <activity android:name=".YourNamJai"></activity>
+        <activity android:name=".YourNamJai" />
+        <activity android:name=".UserLogin" />
+        <activity android:name=".FacebookLogin"></activity>
     </application>
 
 </manifest>

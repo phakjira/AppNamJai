@@ -9,7 +9,7 @@
     <string name="fb_login_protocol_scheme">fb1429465697191095</string>
     <string name="Profile">Profile</string>
     <array name="Faculty">
-        <item>            </item>
+        <item></item>
         <item>Engineering</item>
         <item>Art</item>
         <item>Science</item>
@@ -18,7 +18,7 @@
     </array>
 
     <array name="year">
-        <item>        </item>
+        <item></item>
         <item>First</item>
         <item>Second</item>
         <item>Third</item>
