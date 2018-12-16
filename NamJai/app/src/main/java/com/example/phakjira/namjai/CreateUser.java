@@ -42,6 +42,11 @@ public class CreateUser extends AppCompatActivity {
         spinnerGender = findViewById(R.id.spinnerGender);
         editTextEmail = findViewById(R.id.editTextemail);
         editTextNick = findViewById(R.id.editTextNick);
+        Intent go=getIntent();
+        String email=go.getStringExtra("email");
+        String gender=go.getStringExtra("gender");
+        editTextEmail.setText(email);
+        //spinnerGender.setText("gender");
     }
 
     public void addUser(){

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1034223283190",
+    "firebase_url": "https://namjai-e8957.firebaseio.com",
+    "project_id": "namjai-e8957",
+    "storage_bucket": "namjai-e8957.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1034223283190:android:b5ccf9754bb80cfd",
+        "android_client_info": {
+          "package_name": "com.example.phakjira.namjai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1034223283190-n8pe5tc4gkol08gublenn7gjpkidkuj7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.phakjira.namjai",
+            "certificate_hash": "ea843e76ba151533ef1dbc407f60c00193215b59"
+          }
+        },
+        {
+          "client_id": "1034223283190-q40du1g1dcqnqiusu5qa69dd4u0u6a7f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3QyVbwgbHInytRk-jSirym8U2A5eXyH0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1034223283190-q40du1g1dcqnqiusu5qa69dd4u0u6a7f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
