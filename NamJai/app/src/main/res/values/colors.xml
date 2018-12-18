@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FA7268</color>
+    <color name="colorPrimary">#ffe15e</color>
     <color name="colorPrimaryDark">#FA7268</color>
     <color name="coralpink">#FA7268</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#ffe15e</color>
+    <color name="cream">#ffffff</color>
+    <color name="gray">#f7f4f4</color>
+    <color name="pink">#ed5084</color>
     <color name="white">#ffffff</color>
     <color name="nudePink">#ffc3a0</color>
 </resources>

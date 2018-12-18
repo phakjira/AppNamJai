@@ -33,7 +33,7 @@ public class CreateUser extends AppCompatActivity {
 
         databaseUser = FirebaseDatabase.getInstance().getReference("user");
 
-        textViewFirst = findViewById(R.id.textViewFirst);
+        //textViewFirst = findViewById(R.id.textViewFirst);
         editTextLast = findViewById(R.id.editTextLast);
         editTextName = findViewById(R.id.editTextName);
         editTextID = findViewById(R.id.editTextID);
@@ -68,6 +68,8 @@ public class CreateUser extends AppCompatActivity {
                             User user = new User(firstName,lastName,nickName,studentID,faculty,year,gender,email);
                             databaseUser.child(userId).setValue(user);
                             Toast.makeText(this,"New user added",Toast.LENGTH_SHORT).show();
+                            Intent in=new Intent(getApplication(),Profile.class);
+                            startActivity(in);
                         }else{
                             Toast.makeText(this,"You need to enter your Nickname",Toast.LENGTH_SHORT).show();
                         }
@@ -90,7 +92,5 @@ public class CreateUser extends AppCompatActivity {
 
     public void onFinish(View v) {
         addUser();
-        Intent in=new Intent(getApplication(),Profile.class);
-        startActivity(in);
     }
 }

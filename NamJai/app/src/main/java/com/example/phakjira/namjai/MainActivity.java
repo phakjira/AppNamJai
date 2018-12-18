@@ -17,13 +17,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView textView = findViewById(R.id.textView);
+
+        //TextView textView = findViewById(R.id.textView);
         ImageView logo = findViewById(R.id.imageView2);
-        ImageView slogan = findViewById(R.id.imageView);
+        //ImageView slogan = findViewById(R.id.imageView);
         Animation myanim = AnimationUtils.loadAnimation(this, R.anim.mytransition);
-        textView.startAnimation(myanim);
+        //textView.startAnimation(myanim);
         logo.startAnimation(myanim);
-        slogan.startAnimation(myanim);
+        //slogan.startAnimation(myanim);
 
         new Handler().postDelayed(new Runnable() {
             @Override

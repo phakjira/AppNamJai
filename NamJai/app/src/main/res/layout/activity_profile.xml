@@ -12,8 +12,8 @@
         android:id="@+id/navigation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
-        app:itemBackground="@color/coralpink"
+        android:background="@drawable/gradient_background"
+
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -113,12 +113,13 @@
         android:id="@+id/imageView"
         android:layout_width="100dp"
         android:layout_height="0dp"
-        android:layout_marginTop="34dp"
         android:layout_marginBottom="27dp"
+        android:layout_marginTop="34dp"
         app:layout_constraintBottom_toTopOf="@+id/textViewName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.27999997"
         app:srcCompat="@mipmap/dogsom" />
 
     <TextView

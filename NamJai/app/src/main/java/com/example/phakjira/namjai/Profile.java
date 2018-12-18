@@ -24,11 +24,13 @@ public class Profile extends AppCompatActivity {
                     return true;
                 case R.id.navigation_yournamjai:
                     //TextMessage.setText(R.string.title_dashboard);
-                    Intent in=new Intent(getApplication(),YourNamJai.class);
-                    startActivity(in);
+                    Intent in1=new Intent(getApplication(),YourNamJai.class);
+                    startActivity(in1);
                     return true;
                 case R.id.navigation_createnamjai:
                     //TextMessage.setText(R.string.title_notifications);
+                    Intent in2 = new Intent(getApplication(),CreateNamjai.class);
+                    startActivity(in2);
                     return true;
             }
             return false;

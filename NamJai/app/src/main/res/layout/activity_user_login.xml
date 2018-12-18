@@ -4,71 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     tools:context=".UserLogin">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="122dp"
-        android:layout_height="114dp"
-        android:layout_marginTop="46dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="@color/gray"
+        android:orientation="vertical"
+        android:padding="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/opensans"
+        android:text="LOG IN"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/reallogo" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="3dp"
-        android:layout_marginTop="66dp"
-        android:text="Last Name: "
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/editText9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="19dp"
-        android:layout_marginTop="36dp"
-        android:text="ID: "
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/editText8"
-        app:layout_constraintTop_toBottomOf="@+id/editText9" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText8"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="38dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="ID"
         android:inputType="number"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText9" />
 
     <EditText
         android:id="@+id/editText9"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="22dp"
+        android:layout_marginTop="150dp"
         android:ems="10"
+        android:hint="LAST NAME"
         android:inputType="textPersonName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView12"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView12" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/buttonshape"
+        android:fontFamily="@font/gillsans"
         android:onClick="onLogin"
         android:text="Login"
-        app:layout_constraintStart_toStartOf="@+id/editText8"
+        android:textColor="@color/cream"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText8" />
 
 </android.support.constraint.ConstraintLayout>

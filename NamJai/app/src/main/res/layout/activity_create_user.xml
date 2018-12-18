@@ -4,186 +4,225 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateUser"
-    tools:layout_editor_absoluteY="25dp">
+    android:background="@color/gray"
+    tools:context=".CreateUser">
 
-    <TextView
-        android:id="@+id/textViewProfile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/Profile"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
-    <TextView
-        android:id="@+id/textViewFirst"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:text="First Name: "
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextName"
-        app:layout_constraintStart_toStartOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="32dp"
+            android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editTextName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="48dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/textViewFirst"
-        app:layout_constraintTop_toBottomOf="@+id/textViewProfile" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/shadow"
+                android:elevation="10dp">
 
-    <EditText
-        android:id="@+id/editTextID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/textViewGender"
-        app:layout_constraintTop_toBottomOf="@+id/textViewGender" />
+                <EditText
+                    android:id="@+id/editTextName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
 
-    <EditText
-        android:id="@+id/editTextLast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="39dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/editTextName"
-        app:layout_constraintTop_toTopOf="@+id/editTextName" />
+                    android:ems="10"
+                    android:hint="FIRST NAME"
+                    android:inputType="textPersonName"
+                    android:textSize="14sp" />
+            </LinearLayout>
 
-    <TextView
-        android:id="@+id/textViewLast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Last Name:"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextLast"
-        app:layout_constraintStart_toStartOf="@+id/textViewFirst" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/shadow"
+                android:elevation="10dp">
 
-    <TextView
-        android:id="@+id/textViewGender"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="25dp"
-        android:text="Gender:"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
+                <EditText
+                    android:id="@+id/editTextLast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
 
-    <TextView
-        android:id="@+id/textViewID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:text="ID: "
-        app:layout_constraintStart_toStartOf="@+id/textViewGender"
-        app:layout_constraintTop_toBottomOf="@+id/textViewGender" />
+                    android:ems="10"
+                    android:hint="LAST NAME"
+                    android:inputType="textPersonName"
 
-    <TextView
-        android:id="@+id/textViewFaculty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="12dp"
-        android:text="Faculty:"
-        app:layout_constraintStart_toStartOf="@+id/textViewID"
-        app:layout_constraintTop_toBottomOf="@+id/editTextID" />
+                    android:textAlignment="viewStart"
+                    android:textSize="14sp" />
+            </LinearLayout>
 
-    <Spinner
-        android:id="@+id/spinnerFaculty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="7dp"
-        android:entries="@array/Faculty"
-        app:layout_constraintStart_toStartOf="@+id/editTextID"
-        app:layout_constraintTop_toBottomOf="@+id/editTextID" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="32dp"
+                >
 
-    <TextView
-        android:id="@+id/textViewYear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Year"
-        app:layout_constraintBaseline_toBaselineOf="@+id/spinnerYear"
-        app:layout_constraintStart_toStartOf="@+id/textViewFaculty" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
 
-    <Spinner
-        android:id="@+id/spinnerYear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="17dp"
-        android:entries="@array/year"
-        app:layout_constraintStart_toEndOf="@+id/textViewYear"
-        app:layout_constraintTop_toBottomOf="@+id/textViewFaculty" />
+                    android:background="@drawable/shadow"
+                    android:layout_marginRight="8dp"
+                    android:elevation="10dp"
+                    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:onClick="onFinish"
-        android:text="Finish"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerYear" />
+                    <EditText
+                        android:id="@+id/editTextNick"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
 
-    <TextView
-        android:id="@+id/textViewNick"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nickname: "
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextNick"
-        app:layout_constraintStart_toStartOf="@+id/textViewLast" />
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="NICKNAME"
+                        android:inputType="textPersonName"
+                        android:textSize="14sp" />
 
-    <EditText
-        android:id="@+id/editTextNick"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/editTextLast"
-        app:layout_constraintTop_toTopOf="@+id/editTextLast" />
+                </LinearLayout>
 
-    <TextView
-        android:id="@+id/textViewEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
-        android:text="Email:"
-        app:layout_constraintStart_toStartOf="@+id/textViewNick"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNick" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/shadow"
+                    android:elevation="10dp">
 
-    <EditText
-        android:id="@+id/editTextemail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/editTextNick"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNick" />
+                    <EditText
+                        android:id="@+id/editTextGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
 
-    <EditText
-        android:id="@+id/editTextGender"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="14sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textViewGender"
-        app:layout_constraintStart_toStartOf="@+id/editTextID" />
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="GENDER"
+                        android:inputType="textPersonName"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/shadow"
+                android:elevation="10dp">
+
+                <EditText
+                    android:id="@+id/editTextemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:ems="10"
+                    android:hint="EMAIL"
+                    android:inputType="textPersonName"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/shadow"
+                android:elevation="10dp">
+
+                <EditText
+                    android:id="@+id/editTextID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:ems="10"
+                    android:hint="ID"
+                    android:inputType="textPersonName"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/shadow"
+                android:elevation="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewFaculty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Faculty:"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerFaculty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/Faculty"
+                    app:layout_constraintStart_toStartOf="@+id/editTextID"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextID" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/shadow"
+                android:elevation="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Year"
+                    android:textSize="14sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/spinnerYear"
+                    app:layout_constraintStart_toStartOf="@+id/textViewFaculty" />
+
+                <Spinner
+                    android:id="@+id/spinnerYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/year"
+                    app:layout_constraintStart_toEndOf="@+id/textViewYear"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewFaculty" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="321dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/buttonshape"
+                android:elevation="8dp"
+                android:fontFamily="@font/gillsans"
+                android:onClick="onFinish"
+                android:shadowRadius="5"
+                android:text="Finish"
+                android:textAlignment="center"
+                android:textColor="@color/cream"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

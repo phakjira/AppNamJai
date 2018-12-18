@@ -8,6 +8,15 @@
     <string name="facebook_app_id">1429465697191095</string>
     <string name="fb_login_protocol_scheme">fb1429465697191095</string>
     <string name="Profile">Profile</string>
+
+    <string name="tutor_namjai">Tutor Namjai</string>
+    <string name="other_namjai">Other Namjai</string>
+    <string name="create_tutornamjai">Create Tutor Namjai</string>
+    <string name="create_othernamjai">Create Other Namjai</string>
+    <string name="create_namjai">Create Namjai</string>
+
+    <string name="signup">SIGN UP</string>
+
     <array name="Faculty">
         <item></item>
         <item>Engineering</item>
@@ -27,7 +36,7 @@
     </array>
 
     <array name="gender">
-        <item>      </item>
+        <item></item>
         <item>Female</item>
         <item>Male</item>
     </array>
