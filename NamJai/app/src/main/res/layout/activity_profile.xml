@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Profile"
-    tools:layout_editor_absoluteY="25dp">
+    tools:layout_editor_absoluteY="81dp">
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
@@ -19,7 +19,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTime"
         app:menu="@menu/navigation" />
 
 
@@ -28,20 +27,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
-        android:layout_marginBottom="14dp"
         android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/textViewNickname"
+        app:layout_constraintBottom_toBottomOf="@+id/name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="@+id/name" />
 
     <TextView
         android:id="@+id/textViewNickname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="14dp"
         android:text="Nickname"
-        app:layout_constraintBottom_toTopOf="@+id/textViewFaculty"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewName" />
 
@@ -50,9 +47,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
         android:text="Email"
-        app:layout_constraintBottom_toTopOf="@+id/textViewContact"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewYear" />
 
@@ -60,9 +56,8 @@
         android:id="@+id/textViewFaculty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="13dp"
+        android:layout_marginTop="10dp"
         android:text="Faculty"
-        app:layout_constraintBottom_toTopOf="@+id/textViewYear"
         app:layout_constraintStart_toStartOf="@+id/textViewNickname"
         app:layout_constraintTop_toBottomOf="@+id/textViewNickname" />
 
@@ -71,9 +66,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
         android:text="Contact"
-        app:layout_constraintBottom_toTopOf="@+id/textViewSubject"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
 
@@ -82,9 +76,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
-        android:layout_marginBottom="14dp"
+        android:layout_marginTop="12dp"
         android:text="Subject"
-        app:layout_constraintBottom_toTopOf="@+id/textViewLocation"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewContact" />
 
@@ -93,9 +86,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
-        android:layout_marginBottom="11dp"
+        android:layout_marginTop="14dp"
         android:text="Location"
-        app:layout_constraintBottom_toTopOf="@+id/textViewTime"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSubject" />
 
@@ -103,23 +95,21 @@
         android:id="@+id/textViewTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="82dp"
+        android:layout_marginTop="11dp"
         android:text="Time"
-        app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintStart_toStartOf="@+id/textViewLocation"
         app:layout_constraintTop_toBottomOf="@+id/textViewLocation" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="100dp"
+        android:layout_width="53dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="27dp"
-        android:layout_marginTop="34dp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewName"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.27999997"
         app:srcCompat="@mipmap/dogsom" />
 
     <TextView
@@ -127,10 +117,97 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="13dp"
         android:text="Year"
-        app:layout_constraintBottom_toTopOf="@+id/textViewEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewFaculty" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="77dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="1dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/faculty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/nickname"
+        app:layout_constraintTop_toBottomOf="@+id/nickname" />
+
+    <TextView
+        android:id="@+id/year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="12dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/faculty"
+        app:layout_constraintTop_toBottomOf="@+id/faculty" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="12dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/contact"
+        app:layout_constraintStart_toStartOf="@+id/contact" />
+
+    <TextView
+        android:id="@+id/contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="12dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/subject"
+        app:layout_constraintStart_toStartOf="@+id/subject" />
+
+    <TextView
+        android:id="@+id/subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="14dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/location"
+        app:layout_constraintStart_toStartOf="@+id/location" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="11dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/time"
+        app:layout_constraintStart_toStartOf="@+id/time" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewTime" />
 
 </android.support.constraint.ConstraintLayout>
