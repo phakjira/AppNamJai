@@ -66,9 +66,9 @@ public class CreateUser extends AppCompatActivity {
                         if(!TextUtils.isEmpty(nickName)){
                             String userId = databaseUser.push().getKey();
                             User user = new User(firstName,lastName,nickName,studentID,faculty,year,gender,email);
-                            databaseUser.child(userId).setValue(user);
+                            databaseUser.child(studentID).setValue(user);
                             Toast.makeText(this,"New user added",Toast.LENGTH_SHORT).show();
-                            Intent in=new Intent(getApplication(),Profile.class);
+                            Intent in=new Intent(getApplication(),UserLogin.class);
                             startActivity(in);
                         }else{
                             Toast.makeText(this,"You need to enter your Nickname",Toast.LENGTH_SHORT).show();

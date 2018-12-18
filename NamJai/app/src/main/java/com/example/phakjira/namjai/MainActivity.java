@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private static int splash_time = 4000;
+    private static int splash_time = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
