@@ -26,19 +26,24 @@
         android:id="@+id/textViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="120dp"
         android:text="Name"
-        app:layout_constraintBottom_toBottomOf="@+id/name"
+
+        android:textColor="@color/darkPink"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/name" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewNickname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
         android:text="Nickname"
+        android:textColor="@color/darkPink"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewName" />
 
@@ -46,9 +51,11 @@
         android:id="@+id/textViewEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
         android:text="Email"
+        android:textColor="@color/darkPink"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewYear" />
 
@@ -56,20 +63,22 @@
         android:id="@+id/textViewFaculty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
         android:text="Faculty"
-        app:layout_constraintStart_toStartOf="@+id/textViewNickname"
+        android:textColor="@color/darkPink"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNickname" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="53dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="6dp"
-        app:layout_constraintBottom_toTopOf="@+id/name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/name"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/dogsom" />
 
@@ -77,58 +86,57 @@
         android:id="@+id/textViewYear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
         android:text="Year"
+        android:textColor="@color/darkPink"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewFaculty" />
 
     <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="77dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="120dp"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewName"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/nickname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="1dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginStart="120dp"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/name"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewNickname"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/faculty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="120dp"
         android:text="TextView"
-        app:layout_constraintStart_toStartOf="@+id/nickname"
-        app:layout_constraintTop_toBottomOf="@+id/nickname" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewFaculty"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/year"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="120dp"
         android:text="TextView"
-        app:layout_constraintStart_toStartOf="@+id/faculty"
-        app:layout_constraintTop_toBottomOf="@+id/faculty" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewYear"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginStart="120dp"
         android:text="TextView"
-        app:layout_constraintStart_toStartOf="@+id/year"
-        app:layout_constraintTop_toBottomOf="@+id/year" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewEmail"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

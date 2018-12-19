@@ -34,8 +34,9 @@ public class Profile extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_findnamjai:
-                    Intent in=new Intent(getApplication(),FindTutor.class);
+                    Intent in=new Intent(getApplication(),FindNamJai.class);
                     in.putExtra("id",studentID);
+//                    in.putExtra("name",)
                     startActivity(in);
                     //TextMessage.setText(R.string.title_home);
                     //do smth

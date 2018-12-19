@@ -64,7 +64,7 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/buttonshape"
         android:fontFamily="@font/gillsans"
-        android:onClick="onclick"
+        android:onClick="onLogin"
         android:text="Login"
         android:textColor="@color/cream"
         app:layout_constraintEnd_toEndOf="parent"

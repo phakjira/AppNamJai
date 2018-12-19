@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,20 +12,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Welcome" />
+        <activity
+            android:name=".Welcome"
+            android:theme="@style/AppTheme2" />
         <activity
             android:name=".Profile"
             android:label="@string/title_activity_profile" />
         <activity android:name=".YourNamJai" />
-        <activity android:name=".UserLogin" />
-        <activity android:name=".FacebookLogin" />
+        <activity
+            android:name=".UserLogin"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".FacebookLogin"
+            android:theme="@style/AppTheme2" />
         <activity
             android:name=".CreateUser"
             android:label="@string/signup" />
@@ -51,7 +60,7 @@
         </activity>
         <activity
             android:name=".CreateNamjai"
-            android:label="@string/create_namjai" />
+            android:label="@string/create_namjai"></activity>
         <activity
             android:name=".createTutor"
             android:label="@string/create_tutornamjai"
@@ -68,8 +77,26 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".CreateNamjai" />
         </activity>
-        <activity android:name=".FindTutor" />
-        <activity android:name=".IWantYourNamJai"></activity>
+        <activity
+            android:name=".FindTutor"
+            android:label="Find Tutor NamJai"
+            android:parentActivityName=".FindNamJai">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".FindNamJai" />
+        </activity>
+        <activity
+            android:name=".IWantYourNamJai"
+            android:label="Find Tutor Namjai"
+            android:parentActivityName=".FindTutor">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".FindTutor" />
+        </activity>
+        <activity
+            android:name=".FindNamJai"
+            android:label="Find NamJai"></activity>
+        <activity android:name=".FindOthers"></activity>
     </application>
 
 </manifest>

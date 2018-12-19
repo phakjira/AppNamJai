@@ -42,7 +42,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/editTextOtherName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="24dp"
@@ -64,9 +64,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="8dp"
-                android:text="Upload Image"
                 android:background="@drawable/buttonshape"
                 android:fontFamily="@font/gillsans"
+                android:onClick="onClickUpload"
+                android:text="Upload Image"
                 android:textColor="@color/cream"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.501"
@@ -98,7 +99,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageToUpload" />
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/editTextDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="24dp"
@@ -113,18 +114,19 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
             <Button
-                android:id="@+id/button"
-                android:layout_margin="10dp"
+                android:id="@+id/buttonFIndtutor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="60dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="24dp"
-                android:layout_marginBottom="60dp"
-                android:text="@string/create_namjai"
                 android:background="@drawable/buttonshape"
                 android:fontFamily="@font/gillsans"
+                android:onClick="upLoadFile"
+                android:text="@string/create_namjai"
                 android:textColor="@color/cream"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText3" />

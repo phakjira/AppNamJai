@@ -28,6 +28,7 @@ public class createTutor extends AppCompatActivity {
     public EditText editTextTime;
     public EditText editTextLocation;
     public EditText editTextPrice;
+    public EditText editTextContact;
     public boolean monday;
     public boolean tuesday;
     public boolean wednesday;
@@ -36,6 +37,7 @@ public class createTutor extends AppCompatActivity {
     public boolean saturday;
     public boolean sunday;
     public String studentID;
+    public String nickName;
     DatabaseReference databaseTutor;
 
     @Override
@@ -70,6 +72,7 @@ public class createTutor extends AppCompatActivity {
         editTextLocation = findViewById(R.id.editTextLocation);
         editTextPrice = findViewById(R.id.editTextPrice);
         editTextTime = findViewById(R.id.editTextTime);
+        editTextContact=findViewById(R.id.editTextContact);
         monday = false;
         tuesday = false;
         wednesday = false;
@@ -172,23 +175,28 @@ public class createTutor extends AppCompatActivity {
         String price = editTextPrice.getText().toString().trim();
         String location = editTextLocation.getText().toString().trim();
         String time = editTextTime.getText().toString().trim();
-        if(!TextUtils.isEmpty(price)){
-            if(!TextUtils.isEmpty(location)){
-                if(!TextUtils.isEmpty(time)){
-                    Tutor tutor = new Tutor(studentID,monday,tuesday,wednesday,thursday,friday,saturday,sunday,time,subject,location,price);
-                    toast("you make it here");
-                    databaseTutor.child(studentID).setValue(tutor);
-                    Toast.makeText(this,"New tutor added",Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(this,YourNamJai.class);
-                    startActivity(intent);
-                }else {
-                    toast("You need to specify the time first");
+        String contact=editTextContact.getText().toString().trim();
+        if(!TextUtils.isEmpty(contact)) {
+            if (!TextUtils.isEmpty(price)) {
+                if (!TextUtils.isEmpty(location)) {
+                    if (!TextUtils.isEmpty(time)) {
+                        Tutor tutor = new Tutor(studentID, monday, tuesday, wednesday, thursday, friday, saturday, sunday, time, subject, location, price, contact);
+                        toast("you make it here");
+                        databaseTutor.child(studentID).setValue(tutor);
+                        Toast.makeText(this, "New tutor added", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(this, YourNamJai.class);
+                        startActivity(intent);
+                    } else {
+                        toast("You need to specify the time first");
+                    }
+                } else {
+                    toast("You need to specify the location");
                 }
-            }else {
-                toast("You need to specify the location");
+            } else {
+                toast("You need to specify the price first");
             }
-        }else{
-            toast("You need to specify the price first");
+        }else {
+            toast("You need to specify the contact first");
         }
     }
 

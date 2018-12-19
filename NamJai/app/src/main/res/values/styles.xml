@@ -14,4 +14,17 @@
 
     </style>
 
+    <style name="AppTheme2" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@drawable/gradient_background</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:fontFamily">@font/opensans</item>
+
+        <item name="android:statusBarColor">@color/pink</item>
+        <item name="android:textColor">@color/pink</item>
+
+    </style>
+
 </resources>

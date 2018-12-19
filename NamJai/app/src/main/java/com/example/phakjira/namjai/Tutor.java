@@ -13,8 +13,10 @@ public class Tutor {
     String subject;
     String location;
     String price;
+    String contact;
+//    String nickName;
 
-    public Tutor(String studentID, Boolean monday, Boolean tuesday, Boolean wednesday, Boolean thursday, Boolean friday, Boolean saturday, Boolean sunday, String time, String subject, String location, String price) {
+    public Tutor(String studentID, Boolean monday, Boolean tuesday, Boolean wednesday, Boolean thursday, Boolean friday, Boolean saturday, Boolean sunday, String time, String subject, String location, String price,String contact) {
         this.studentID = studentID;
         this.monday = monday;
         this.tuesday = tuesday;
@@ -27,6 +29,8 @@ public class Tutor {
         this.subject = subject;
         this.location = location;
         this.price = price;
+        this.contact=contact;
+//        this.nickName = nickName;
     }
 
     public Tutor(){
@@ -81,6 +85,8 @@ public class Tutor {
         return price;
     }
 
+    public String getContact() {return contact;}
+
     public void setStudentID(String studentID) {
         this.studentID = studentID;
     }
@@ -128,4 +134,14 @@ public class Tutor {
     public void setPrice(String price) {
         this.price = price;
     }
+
+    public void setContact(String contact) {this.contact=contact;}
+
+//    public String getNickName() {
+//        return nickName;
+//    }
+//
+//    public void setNickName(String nickName) {
+//        this.nickName = nickName;
+//    }
 }
