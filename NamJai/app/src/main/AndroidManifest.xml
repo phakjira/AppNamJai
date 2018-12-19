@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,7 +25,9 @@
         <activity android:name=".YourNamJai" />
         <activity android:name=".UserLogin" />
         <activity android:name=".FacebookLogin" />
-        <activity android:name=".CreateUser" android:label="@string/signup"/>
+        <activity
+            android:name=".CreateUser"
+            android:label="@string/signup" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
@@ -47,18 +49,27 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".CreateNamjai" android:label="@string/create_namjai"/>
-        <activity android:name=".createTutor" android:label="@string/create_tutornamjai"
+        <activity
+            android:name=".CreateNamjai"
+            android:label="@string/create_namjai" />
+        <activity
+            android:name=".createTutor"
+            android:label="@string/create_tutornamjai"
             android:parentActivityName=".CreateNamjai">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".CreateNamjai" />
         </activity>
-        <activity android:name=".createOther" android:label="@string/create_othernamjai" android:parentActivityName=".CreateNamjai">
+        <activity
+            android:name=".createOther"
+            android:label="@string/create_othernamjai"
+            android:parentActivityName=".CreateNamjai">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".CreateNamjai" />
         </activity>
+        <activity android:name=".FindTutor" />
+        <activity android:name=".IWantYourNamJai"></activity>
     </application>
 
 </manifest>

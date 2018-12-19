@@ -76,4 +76,8 @@ public class UserLogin extends AppCompatActivity {
 //        Toast.makeText(getApplication(),"Incorrect ID or Last name",Toast.LENGTH_SHORT).show();
 
     }
+    public void onclick (View v) {
+        Intent go=new Intent(getApplication(),Profile.class);
+        startActivity(go);//just add to try findtutor class because its bugggg yayy
+    }
 }
