@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.webkit.MimeTypeMap;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Button;
 import android.view.View;
@@ -37,6 +38,7 @@ public class createOther extends AppCompatActivity {
     String studentID;
     EditText editTextOtherName;
     EditText editTextDescription;
+    Spinner spinnerName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +47,13 @@ public class createOther extends AppCompatActivity {
 
         imageToUpload = (ImageView) findViewById(R.id.imageToUpload);
         uploadImage = (Button) findViewById(R.id.uploadImage);
-        editTextOtherName = findViewById(R.id.editTextOtherName);
         editTextDescription = findViewById(R.id.editTextDescription);
+        spinnerName = findViewById(R.id.spinnerNameOther);
 
         databaseOther = FirebaseDatabase.getInstance().getReference("others");
-        mStorageRef = FirebaseStorage.getInstance().getReference();
-        studentID = "6031816621";
+//        mStorageRef = FirebaseStorage.getInstance().getReference();
+        Intent intent = getIntent();
+        studentID = intent.getStringExtra("id");
 
     }
 
@@ -70,6 +73,27 @@ public class createOther extends AppCompatActivity {
             selectedImage = data.getData();
             imageToUpload.setImageURI(selectedImage);
         }
+    }
+
+    public void uploadother(){
+        String name = spinnerName.getSelectedItem().toString().trim();
+        String description = editTextDescription.getText().toString().trim();
+        if(!TextUtils.isEmpty(name)){
+            if(!TextUtils.isEmpty(description)){
+                RandomNamJai randomNamJai = new RandomNamJai(name,description);
+                databaseOther.child(studentID).setValue(randomNamJai);
+                Intent intent = new Intent(getApplication(),Profile.class);
+                intent.putExtra("id",studentID);
+                startActivity(intent);
+            }
+        }else{
+
+        }
+
+    }
+
+    public void onCreateOther(View view){
+        uploadother();
     }
 
 //    public void upLoadFile(View view){

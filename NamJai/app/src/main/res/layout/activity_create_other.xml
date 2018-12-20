@@ -41,22 +41,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <EditText
-                android:id="@+id/editTextOtherName"
+            <Spinner
+                android:id="@+id/spinnerNameOther"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
-                android:ems="10"
-                android:hint="calculator, neck tie, shoes, etc."
-                android:inputType="textPersonName"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                android:entries="@array/objextName" />
 
             <Button
                 android:id="@+id/uploadImage"
@@ -125,7 +114,7 @@
                 android:layout_marginTop="24dp"
                 android:background="@drawable/buttonshape"
                 android:fontFamily="@font/gillsans"
-                android:onClick="upLoadFile"
+                android:onClick="onCreateOther"
                 android:text="@string/create_namjai"
                 android:textColor="@color/cream"
                 app:layout_constraintEnd_toEndOf="parent"

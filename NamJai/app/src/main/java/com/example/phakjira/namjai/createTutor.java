@@ -185,6 +185,7 @@ public class createTutor extends AppCompatActivity {
                         databaseTutor.child(studentID).setValue(tutor);
                         Toast.makeText(this, "New tutor added", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(this, Profile.class);
+                        intent.putExtra("id",studentID);
                         startActivity(intent);
                     } else {
                         toast("You need to specify the time first");

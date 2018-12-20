@@ -47,6 +47,7 @@ public class CreateUser extends AppCompatActivity {
         String gender=go.getStringExtra("gender");
         editTextEmail.setText(email);
         editTextGender.setText(gender);
+
     }
 
     public void addUser(){

@@ -49,5 +49,17 @@
         <item>Physics2</item>
     </array>
 
+    <array name="objextName">
+        <item>Select Here</item>
+        <item>   Textbook  </item>
+        <item>  Calculator </item>
+        <item>   Neck tie  </item>
+        <item>  Peppermint </item>
+        <item>   T-ruler   </item>
+        <item>  Stationary </item>
+        <item>    Goggle   </item>
+        <item>   Hair Tie  </item>
+    </array>
+
 </resources>
 

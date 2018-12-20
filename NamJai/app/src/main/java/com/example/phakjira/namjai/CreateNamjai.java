@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class CreateNamjai extends AppCompatActivity {
     public String studentID;
@@ -15,6 +16,7 @@ public class CreateNamjai extends AppCompatActivity {
 
         Intent intent = getIntent();
         studentID = intent.getStringExtra("id");
+        Toast.makeText(this,studentID,Toast.LENGTH_SHORT).show();
 
 
     }
