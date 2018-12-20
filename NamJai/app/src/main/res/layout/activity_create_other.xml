@@ -97,6 +97,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
                 android:ems="10"
+                android:hint="don't forget to add your contact"
                 android:inputType="textMultiLine"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

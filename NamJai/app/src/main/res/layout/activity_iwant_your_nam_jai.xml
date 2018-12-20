@@ -7,21 +7,6 @@
     tools:context=".IWantYourNamJai"
     tools:layout_editor_absoluteY="81dp">
 
-    <ImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/imageProfile"
-        android:layout_width="80dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginEnd="116dp"
-
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/getName"
-        app:layout_constraintEnd_toEndOf="@+id/buttonIwant"
-        app:layout_constraintStart_toEndOf="@+id/IwantYear"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/dogsom" />
-
     <TextView
         android:id="@+id/IwantName"
         android:layout_width="wrap_content"
@@ -122,70 +107,75 @@
         android:id="@+id/getName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="53dp"
-        android:layout_marginStart="100dp"
+        android:layout_marginTop="6dp"
         android:text="TextView"
-        app:layout_constraintBaseline_toBaselineOf="@+id/IwantName"
-        app:layout_constraintEnd_toEndOf="@+id/imageProfile"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <TextView
         android:id="@+id/getNickname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="16dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/getFaculty"
-        app:layout_constraintStart_toStartOf="@+id/getName" />
+        app:layout_constraintStart_toStartOf="@+id/getName"
+        app:layout_constraintTop_toBottomOf="@+id/getName" />
 
     <TextView
         android:id="@+id/getFaculty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="TextView"
-        app:layout_constraintBaseline_toBaselineOf="@+id/IwantFaculty"
-        app:layout_constraintStart_toStartOf="@+id/getNickname" />
+        app:layout_constraintStart_toStartOf="@+id/getNickname"
+        app:layout_constraintTop_toBottomOf="@+id/getNickname" />
 
     <TextView
         android:id="@+id/getYear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="TextView"
-        app:layout_constraintBaseline_toBaselineOf="@+id/IwantYear"
-        app:layout_constraintStart_toStartOf="@+id/getFaculty" />
+        app:layout_constraintStart_toStartOf="@+id/getFaculty"
+        app:layout_constraintTop_toBottomOf="@+id/getFaculty" />
 
     <TextView
         android:id="@+id/getLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="TextView"
-        app:layout_constraintBaseline_toBaselineOf="@+id/IwantLocation"
-        app:layout_constraintStart_toStartOf="@+id/getYear" />
+        app:layout_constraintStart_toStartOf="@+id/getYear"
+        app:layout_constraintTop_toBottomOf="@+id/getYear" />
 
     <TextView
         android:id="@+id/getTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="TextView"
-        app:layout_constraintBaseline_toBaselineOf="@+id/IwantTime"
-        app:layout_constraintStart_toStartOf="@+id/getPrice" />
+        app:layout_constraintStart_toStartOf="@+id/getPrice"
+        app:layout_constraintTop_toBottomOf="@+id/getDay" />
 
     <TextView
         android:id="@+id/getPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="TextView"
-        app:layout_constraintBaseline_toBaselineOf="@+id/IwantPrice"
-        app:layout_constraintStart_toStartOf="@+id/getContact" />
+        app:layout_constraintStart_toStartOf="@+id/getContact"
+        app:layout_constraintTop_toBottomOf="@+id/getTime" />
 
     <TextView
         android:id="@+id/getContact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="TextView"
-        app:layout_constraintBaseline_toBaselineOf="@+id/IwantContact"
-        app:layout_constraintEnd_toEndOf="@+id/getDay"
-        app:layout_constraintStart_toStartOf="@+id/getDay" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getPrice" />
 
     <TextView
         android:id="@+id/IwantDay"
@@ -203,19 +193,19 @@
         android:id="@+id/getDay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="TextView"
-        app:layout_constraintBaseline_toBaselineOf="@+id/IwantDay"
-        app:layout_constraintStart_toStartOf="@+id/getLocation" />
+        app:layout_constraintStart_toStartOf="@+id/getTime"
+        app:layout_constraintTop_toBottomOf="@+id/getLocation" />
 
     <Button
         android:id="@+id/buttonIwant"
         android:layout_width="0dp"
         android:layout_height="37dp"
 
+        android:layout_marginBottom="4dp"
         android:layout_marginEnd="16dp"
-
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
         android:background="@drawable/buttonshape"
         android:fontFamily="@font/gillsans"
         android:gravity="center"
@@ -224,8 +214,21 @@
         android:text="Iwantyournamjai"
         android:textColor="@color/cream"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginStart="39dp"
+        app:layout_constraintBottom_toTopOf="@+id/IwantName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/IwantContact" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blanklogo" />
 
 </android.support.constraint.ConstraintLayout>

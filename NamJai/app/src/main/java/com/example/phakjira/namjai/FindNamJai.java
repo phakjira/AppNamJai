@@ -14,6 +14,7 @@ public class FindNamJai extends AppCompatActivity {
         setContentView(R.layout.activity_find_nam_jai);
         Intent in=getIntent();
         studentID=in.getStringExtra("id");
+
     }
 
     public void findTutor (View v) {
@@ -22,9 +23,9 @@ public class FindNamJai extends AppCompatActivity {
         startActivity(findtutor);
     }
 
-    /*public void findOther(View v) {
-        Intent findOther=new Intent(getApplication(),FindOther.class);
+    public void findOther(View v) {
+        Intent findOther=new Intent(getApplication(),FindOthers.class);
         findOther.putExtra("id",studentID);
         startActivity(findOther);
-    }*/
+    }
 }

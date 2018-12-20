@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -60,7 +59,7 @@
         </activity>
         <activity
             android:name=".CreateNamjai"
-            android:label="@string/create_namjai"></activity>
+            android:label="@string/create_namjai" />
         <activity
             android:name=".createTutor"
             android:label="@string/create_tutornamjai"
@@ -95,8 +94,9 @@
         </activity>
         <activity
             android:name=".FindNamJai"
-            android:label="Find NamJai"></activity>
-        <activity android:name=".FindOthers"></activity>
+            android:label="Find NamJai" />
+        <activity android:name=".FindOthers" />
+        <activity android:name=".ListView"></activity>
     </application>
 
 </manifest>
