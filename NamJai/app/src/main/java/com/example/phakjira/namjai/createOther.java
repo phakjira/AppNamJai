@@ -32,7 +32,7 @@ public class createOther extends AppCompatActivity {
     Button uploadImage;
     public Uri imageUri;
     DatabaseReference databaseOther;
-    StorageReference storageReference;
+    StorageReference mStorageRef;
     Uri selectedImage;
     String studentID;
     EditText editTextOtherName;
@@ -49,7 +49,7 @@ public class createOther extends AppCompatActivity {
         editTextDescription = findViewById(R.id.editTextDescription);
 
         databaseOther = FirebaseDatabase.getInstance().getReference("others");
-//        storageReference = FirebaseStorage.getInstance().getReference("others");
+        mStorageRef = FirebaseStorage.getInstance().getReference();
         studentID = "6031816621";
 
     }

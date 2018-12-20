@@ -22,6 +22,7 @@ public class IWantYourNamJai extends AppCompatActivity {
     String tutorID;
     String studentID;
     DatabaseReference databaseChosen;
+    DatabaseReference databaseChoose;
 
 
     @Override
@@ -33,6 +34,8 @@ public class IWantYourNamJai extends AppCompatActivity {
         databaseTutor = databaseReference.child("tutor");
         databaseUser = databaseReference.child("user");
         databaseChosen = databaseReference.child("chosen");
+        databaseChoose = databaseReference.child("choose");
+
         Intent go=getIntent();
         tutorID=go.getStringExtra("tutorID");
         studentID=go.getStringExtra("studentID");
@@ -174,6 +177,7 @@ public class IWantYourNamJai extends AppCompatActivity {
     public void onClick(View v) {
 
         databaseChosen.child(tutorID).child(studentID).setValue(studentID);
+        databaseChoose.child(studentID).child(tutorID).setValue(tutorID);
         Toast.makeText(this,tutorID,Toast.LENGTH_SHORT).show();
         Intent goyournamjai=new Intent(getApplication(),YourNamJai.class);
         goyournamjai.putExtra("tutorID",tutorID);

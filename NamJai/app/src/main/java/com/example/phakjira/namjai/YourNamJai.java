@@ -27,6 +27,7 @@ public class YourNamJai extends AppCompatActivity {
     DatabaseReference databaseUser;
     DatabaseReference databaseTutor;
     DatabaseReference databaseChosen;
+    DatabaseReference databaseChoose;
 
 
 
@@ -36,57 +37,61 @@ public class YourNamJai extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_your_nam_jai);
         this.setTitle("Your NamJai");
-        Intent goyournamjai=getIntent();
-        tutorID=goyournamjai.getStringExtra("tutorID");
-        studentID=goyournamjai.getStringExtra("studentID");
+        Intent intent=getIntent();
+//        tutorID=goyournamjai.getStringExtra("tutorID");
+        studentID=intent.getStringExtra("studentID");
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
         databaseTutor = databaseReference.child("tutor");
         databaseUser = databaseReference.child("user");
         databaseChosen = databaseReference.child("chosen").child(studentID);
+        databaseChoose = databaseReference.child("choose").child(studentID);
+//        toast(studentID);
+
 
 
 //
-        databaseUser.addValueEventListener(new ValueEventListener() {
+        databaseChoose.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String text="";
-                //for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    final ListView list;
-                    list=findViewById(R.id.listViewnamjaiyouchoose);
-                    final ArrayList<String> arrayList=new ArrayList<>();
-                    User user = dataSnapshot.child(studentID).getValue(User.class);
-                    User usertutor=dataSnapshot.child(tutorID).getValue(User.class);
-                    final String name = usertutor.firstName+" "+ usertutor.lastName;
+                final ListView list;
+                list = findViewById(R.id.listViewnamjaiyouchoose);
+                final ArrayList<String> arrayList = new ArrayList<>();
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                    String key = ds.getKey();
+                    final String theTutorID = dataSnapshot.child(key).getValue().toString();
+                    databaseUser.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            User user = dataSnapshot.child(theTutorID).getValue(User.class);
+                            final String name = user.firstName + " " + user.lastName;
+                            databaseTutor.addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                    Tutor tutor = dataSnapshot.child(theTutorID).getValue(Tutor.class);
+                                    String subject = tutor.subject;
+                                    arrayList.add("Tutor: " + name + " ,Subject: " + subject);
+                                    ArrayAdapter<String> adapter = new ArrayAdapter<>(YourNamJai.this, android.R.layout.simple_list_item_1, arrayList);
+                                    list.setAdapter(adapter);
+                                }
 
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError databaseError) {
 
+                                }
+                            });
+                        }
 
-                //}
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                databaseTutor.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        String text2="";
-                        //for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                            Tutor tutor=dataSnapshot.child(tutorID).getValue(Tutor.class);
-                            String subject = tutor.subject;
-                            arrayList.add("Tutor: "+name+" ,Subject: "+subject);
-                            ArrayAdapter<String > adapter=new ArrayAdapter<>(YourNamJai.this,android.R.layout.simple_list_item_1,arrayList);
-                            list.setAdapter(adapter);
+                        }
+                    });
 
-                       // }
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-
-                });
+                }
             }
-
             @Override
-            public void onCancelled(DatabaseError databaseError) {
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
 
@@ -104,6 +109,7 @@ public class YourNamJai extends AppCompatActivity {
                 list1=findViewById(R.id.listViewnamjaiischosen);
                 for (DataSnapshot ds: dataSnapshot.getChildren()){
                     String key = ds.getKey();
+                    toast(key);
                     final String id = dataSnapshot.child(key).getValue().toString();
 //                    int b = id.indexOf("=");
 //                    final String userID = id.substring(1,b);
@@ -122,9 +128,9 @@ public class YourNamJai extends AppCompatActivity {
 
                         }
                     });
+                    toast(a);
 
                 }
-                Toast.makeText(getApplication(),a,Toast.LENGTH_SHORT).show();
             }
 //
             @Override
@@ -134,44 +140,7 @@ public class YourNamJai extends AppCompatActivity {
         });
 
 
-//        databaseChosen.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                final ArrayList<String> arrayList1=new ArrayList<>();
-//                final ListView list1;
-//                String a = "";
-//                list1=findViewById(R.id.listViewnamjaiischosen);
-//                for (DataSnapshot ds: dataSnapshot.getChildren()){
-//                    String key = ds.getKey();
-//                    String id = dataSnapshot.child(studentID).getValue().toString();
-//                    int b = id.indexOf("=");
-//                    final String userID = id.substring(1,b);
-//                    a = a + userID + " ";
-////                    Toast.makeText(getApplication(),userID,Toast.LENGTH_SHORT).show();
-//                    databaseUser.addValueEventListener(new ValueEventListener() {
-//                        @Override
-//                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                            User user = dataSnapshot.child(userID).getValue(User.class);
-//                            arrayList1.add("Name: "+ user.firstName+ "\n"+ user.lastName+ " Nickname:  "+user.nickName);
-//                            ArrayAdapter<String > adapter=new ArrayAdapter<>(YourNamJai.this,android.R.layout.simple_list_item_1,arrayList1);
-//                            list1.setAdapter(adapter);
-//                        }
 //
-//                        @Override
-//                        public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//                        }
-//                    });
-//
-//                }
-//                Toast.makeText(getApplication(),a,Toast.LENGTH_SHORT).show();
-//            }
-//            //
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//            }
-//        });
 
 
 
