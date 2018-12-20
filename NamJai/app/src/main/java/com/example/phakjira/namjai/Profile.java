@@ -43,9 +43,9 @@ public class Profile extends AppCompatActivity {
                     return true;
                 case R.id.navigation_yournamjai:
                     //TextMessage.setText(R.string.title_dashboard);
-                    Intent in1=new Intent(getApplication(),YourNamJai.class);
-                    in1.putExtra("id",studentID);
-                    startActivity(in1);
+                    Intent goyournamjai=new Intent(getApplication(),YourNamJai.class);
+                    goyournamjai.putExtra("id",studentID);
+                    startActivity(goyournamjai);
                     return true;
                 case R.id.navigation_createnamjai:
                     //TextMessage.setText(R.string.title_notifications);
